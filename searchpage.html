@@ -1,0 +1,255 @@
+<html dir="rtl">
+
+<head>
+    <link href="https://fonts.googleapis.com/css2?family=Amiri&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>صفحة البحث</title>
+    <script>function searchFunction() {
+        var input, filter, ul, li, a, i;
+        input = document.getElementById('myinput');
+        filter = input.value.toUpperCase();
+        ul = document.getElementById('wrapper');
+        li = ul.getElementsByTagName('li');
+    
+        for(i=0 ; i< li.length; i++){
+            a = li[i].getElementsByTagName('a')[0];
+            if(a.innerHTML.toUpperCase().indexOf(filter) > -1){
+                li[i].style.display = "";
+            }
+    
+            else{
+                li[i].style.display = 'none';
+            }
+        }
+    }
+    </script>
+    <style>
+        * {
+    margin: 0;
+    padding: 0;
+}
+
+body, html {
+    background: #e0e0e0;
+    font-family: 'Amiri', serif;
+    background-image: url('./images/indoorplant.jpg');
+}
+
+.search-bar {
+	position: relative;
+    margin: 0 auto;
+    width: 95%;
+    max-width: 344px;
+    height: 48px;
+    background: #fff;
+    border-radius: 2px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.5);
+    overflow: hidden;
+}
+
+ul#wrapper {
+    list-style: none;
+    display: inline-block;
+    margin-top: 100px;
+	text-align: center;
+}
+
+li {
+    width: 200px;
+    height: 100px;
+    background: #ffffffa9;
+    display: inline-block;
+    margin: 20px;
+    box-shadow: 0 2px 3px rgba(0, 0, 0, 0.5);
+    border-radius: 2px;
+    text-align: center;
+}
+.search-box {
+ position: absolute;
+ top: 19%;
+ left: 50%;
+ transform: translate(-50%, -50%);
+ background: #eef5ff;
+ height: 40px;
+ border-radius: 40px;
+ padding: 10px;
+}
+
+.search-box:hover > .search-txt {
+ width: 340px;
+ padding: 0 6px;
+}
+
+.search-box:hover > .searchbtn {
+ background: white;
+ color: #55a630;
+}
+
+.search-btn {
+ float: right;
+ width: 40px;
+ height: 40px;
+ border-radius: 50%;
+ background: #70bb4d;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ transition: 0.4s;
+ color: white;
+ cursor: pointer;
+}
+
+.search-btn > i {
+ font-size: 30px;
+}
+
+.search-txt {
+    text-align: right;
+ border: none;
+ background: none;
+ outline: none;
+ float: right;
+ padding: 0;
+ color: rgb(112, 112, 112);
+ font-size: 16px;
+ transition: 0.4s;
+ line-height: 40px;
+ width: 0px;
+ font-weight: bold;
+}
+a {
+    font-size: 24px;
+    color: rgb(54, 82, 82);
+    line-height: 100px;
+    font-family: monospace;
+    text-decoration: none;
+}
+.imgsearch{
+    height: 30px;
+}
+.solution1 {
+    background: url("https://scontent-frx5-1.xx.fbcdn.net/v/t1.0-0/q92/p526x296/26230297_160544681336798_1685384360638587870_n.jpg?oh=b65e28b26251f2ff876e3caa5bcea755&oe=5B3ACC0D");
+    background-size: auto; 
+}
+.navbar{
+    width: 100%;
+    height: 7%;
+    background: #70bb4d;
+    display: flex;
+    padding: 10px;
+    border-left: none;
+    border-right: none;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.logoimg{
+    width: 45px;
+    margin: 4px;
+    margin-bottom: 8px;
+}
+.nav{
+    color: rgb(255, 255, 255);
+    padding-right: 20px;
+    padding-left: 20px;
+    text-decoration: none;
+    font-size: medium;
+    font-family: 'Amiri', serif;
+}
+</style>
+</head>
+
+<body>
+    <div class="navbar" id="navbar">
+        <a href="./mainpage.html"><img class="logoimg" src="./images/IMG_4423.PNG"></a>
+        <a class="nav" href="./mainpage.html" ><h2> أزهر </h2></a>
+        <a class="nav" href="./indoorplants.html" ><h2> النباتات الداخلية</h2></a>
+        <a class="nav" href="./outdoorplants.html" ><h2> النباتات الخارجية</h2></a>
+        <a class="nav" href="./instructions.html" ><h2>   أفكار وتوجيهات</h2></a>
+        <a class="nav" href="./searchpage.html" ><h2>  ابحث عن نبتة</h2></a>
+      </div>
+    <div class="search-box">
+        <input type="text" name="" class="search-txt" id="myinput" onkeyup="searchFunction()" placeholder="... ادخل اسم النبتة"/>
+        <a class="search-btn">
+            <img class="imgsearch" src="./images/searchbtn.jpg">
+        </a>
+    </div>
+    <ul id="wrapper">
+        <li>
+            <a href="./bougnevilla.html"> الجهنمية</a>
+        </li>
+        <li>
+            <a href="./catsclaw.html"> مخلب القط </a>
+        </li>
+        <li>
+            <a href="./carissa.html"> كاريسا</a>
+        </li>
+        <li>
+            <a href="./scarletcordia.html"> الكورديا القرمزية</a>
+        </li>
+        <li>
+            <a href="./bluejasmine.html"> الياسمين الأزرق</a>
+        </li>
+        <li>
+            <a href="./ficus.html"> فيكس امريكي</a>
+        </li>
+        <li>
+            <a href="./Leucaena.html"> لوسيانا</a>
+        </li>
+        <li>
+            <a href="./cotyledon.html"> تاج الفضة</a>
+        </li>   
+        <li>
+            <a href="./Cordyline.html"> جلوكا</a>
+        </li>
+        <li>
+            <a href="./Livistona.html"> نخلة لفيستونا </a>
+        </li>
+        <li>
+            <a href="./Schefflera.html"> شفليرا المظلة</a>
+        </li>
+        <li>
+            <a href="./Pachira.html"> باشيرا</a>
+        </li>
+        <li>
+            <a href="./aralia.html"> أراليا</a>
+        </li>
+        <li>
+            <a href="./Jasminum.html">الياسمين الصيني</a>
+        </li>
+        <li>
+            <a href="./Chamaedorea.html"> شاميدوريا</a>
+        </li>
+        <li>
+            <a href="./sunflower.html"> تباع الشمس</a>
+        </li>    
+        <li>
+            <a href="./Thevetia.html"> ثيفيتيا</a>
+        </li>   
+        <li>
+            <a href="./Tipuana.html"> شجرة أبو المكارم</a>
+        </li>
+        <li>
+            <a href="./Jasminumsambac.html"> الفل </a>
+        </li>
+        <li>
+            <a href="./spider.html"> العنكبوت</a>
+        </li>
+        <li>
+            <a href="./begonia.html"> بيقونيا</a>
+        </li>
+        <li>
+            <a href="./Monstera.html"> القفص الصدري</a>
+        </li>
+        <li>
+            <a href="./Echeveria.html">ايشيفيريا</a>
+        </li> 
+    </ul>
+    <div class="solution1"> 
+    </div>
+</body>
+
+</html>
